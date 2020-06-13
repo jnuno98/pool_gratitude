@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Site Creator Description">
+  
+  
+  <title>pool</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" ><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-3">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <img class="adventure" src="http://13.57.47.139/adventure-logo.png" style="width:169px;height:50px;"/>
+
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5">
+                            &ensp; pool of gratitude</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" >leaderboards<br>
+                    </a></div>
+        </div>
+    </nav>
+</section>
+
+
+
+<section class="engine"></section><section class="cid-qTkA127IK8 mbr-fullscreen" id="menu">
+
+    <div class="container align-center">
+        <div class="row justify-content-md-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"><br><br><br>pool of gratitude</h1>
+                
+                <p class="mbr-text pb-3 mbr-fonts-style display-5"></p>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" id="metamask"><span class="mbri-lock mbr-iconfont mbr-iconfont-btn"></span>connect with metamask</a></div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+<section class="engine"><a href="https://mobirise.info/q">responsive site templates</a></section><section id="pool1" class="mbr-section info1 cid-rZs1zmjizi" id="info1-5">
+
+    
+
+    
+    <div class="container">
+        <div class="row justify-content-center content-row">
+            <div class="media-container-column title col-12 col-lg-7 col-md-6">
+                <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5">
+                    current balance:</h3>
+                <h2 class="align-left mbr-bold mbr-fonts-style display-5" id="balance" ></h2>
+            </div>
+            <div class="media-container-column col-12 col-lg-3 col-md-4">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="countdown1 cid-rZs1adIQl8" id="countdown1-4">
+    
+    
+    
+    <div class="container ">
+        <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">pool</h2>
+        <h3 class="mbr-section-subtitle align-center mbr-fonts-style display-5" id="pool_info"></h3>
+        
+    </div>
+    <!--
+    <div class="container countdown-cont align-center" id="countdown_div">
+        <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="Days"></div>
+        <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="Hours"></div> 
+        <div class="minutesCountdown col-xs-3 col-sm-3 col-md-3" title="Minutes"></div> 
+        <div class="secondsCountdown col-xs-3 col-sm-3 col-md-3" title="Seconds"></div>
+        <div class="countdown pt-5 mt-2" data-due-date="" id="countdown"> 
+        </div>
+    </div> -->
+</section>
+
+<section class="mbr-section info4 cid-rZs3dBG0L4" id="info4-6">
+
+    
+
+    
+    <div class="container" id="buttons">
+        <div class="justify-content-center row">
+            <div class="media-container-column title col-12 col-md-10">
+                
+                
+                
+                <div class="mbr-section-btn align-right py-4"><a class="btn btn-primary display-4" onclick="join_pool()">join pool</a>
+                    <a class="btn btn-primary display-4" onclick="withdraw()">withdraw</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/nav-dropdown.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/countdown/jquery.countdown.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+
+
+<script>
+  var _user = "";
+  var grat_contract;
+
+  var _token ;
+  var _pool =""; //this is the current pool on the page
+  var _pool_created = false;
+  var master;
+  const ethereumButton = document.getElementById("metamask");
+  var account;
+  var address1 = "http://127.0.0.1:8545";
+
+  
+
+  
+  ethereumButton.addEventListener("click",() => {
+    login();
+  });
+
+
+  async function login() {
+    accounts = await ethereum.enable();
+    console.log("account is "+accounts);
+    setUserAddress(accounts);
+    await get_contract();
+    await set_master("0xC89469f5cc017689b4F149942f00850beBFdD4e6");
+    await allow_token(_token);
+    set_balance();
+    update_balance();
+
+    if (_pool_created == false) {
+      console.log("pool created");
+      await pool_creation();
+    }
+    show_pool();
+
+  }
+
+
+  web3 = new Web3(web3.currentProvider);
+  web3.eth.getAccounts((err, accounts1) => {
+            if (err) console.log(err);
+            else if (!accounts1.length)
+              window.alert("No Metamask accounts found");
+            else {
+              console.log(accounts1);
+              setPoolAddress("0xB529efDfF9A36A8903110B15AbCc76069F9DFF87");
+              setTokenAddress("0xc6cD085b7c6aE502d5540Cdb7da70db0Ec70b2b5");
+
+              
+              show("menu","countdown1-4");
+              show("menu","pool1");
+              show("menu","buttons");
+            }});
+
+  
+
+
+
+
+    async function get_contract() {
+        grat_contract = await new web3.eth.Contract([ { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_user", "type": "address" } ], "name": "add", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_user", "type": "address" }, { "name": "_amount", "type": "uint256" } ], "name": "add_balance", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" } ], "name": "allow_token", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_user", "type": "address" } ], "name": "get_balance", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_pool", "type": "address" } ], "name": "get_pool", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_pool", "type": "address" } ], "name": "get_pool_donations", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_user", "type": "address" } ], "name": "get_user_donation", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_pool", "type": "address" }, { "name": "_token", "type": "address" }, { "name": "_amount", "type": "uint256" } ], "name": "join_pool", "outputs": [], "payable": true, "stateMutability": "payable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_user", "type": "address" }, { "name": "_amount", "type": "uint256" } ], "name": "set_balance", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_master", "type": "address" } ], "name": "set_master", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_pool", "type": "address" }, { "name": "_token", "type": "address" }, { "name": "begin", "type": "uint256" }, { "name": "end", "type": "uint256" }, { "name": "min", "type": "uint256" }, { "name": "interest", "type": "uint16" }, { "name": "_description", "type": "string" } ], "name": "setPool", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "from", "type": "address" }, { "name": "to", "type": "address" }, { "name": "value", "type": "uint256" } ], "name": "transfer", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_pool", "type": "address" }, { "name": "_token", "type": "address" } ], "name": "withdraw", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_token", "type": "address" }, { "name": "_user", "type": "address" }, { "name": "_amount", "type": "uint256" } ], "name": "withdraw_balance", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "_token", "type": "address" }, { "indexed": false, "name": "_user", "type": "address" }, { "indexed": false, "name": "_amount", "type": "uint256" } ], "name": "Balance", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "_token", "type": "address" }, { "indexed": false, "name": "_pool", "type": "address" }, { "indexed": false, "name": "_user", "type": "address" }, { "indexed": false, "name": "_amount", "type": "uint256" } ], "name": "Staked", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "_token", "type": "address" }, { "indexed": false, "name": "_pool", "type": "address" }, { "indexed": false, "name": "_user", "type": "address" }, { "indexed": false, "name": "_amount", "type": "uint256" } ], "name": "Donation", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "_token", "type": "address" }, { "indexed": false, "name": "_pool", "type": "address" }, { "indexed": false, "name": "_user", "type": "address" }, { "indexed": false, "name": "_amount", "type": "uint256" } ], "name": "Return", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "begin", "type": "uint256" }, { "indexed": false, "name": "end", "type": "uint256" }, { "indexed": false, "name": "min", "type": "uint256" }, { "indexed": false, "name": "interest", "type": "uint16" }, { "indexed": false, "name": "_description", "type": "string" } ], "name": "Pool", "type": "event" }, { "constant": true, "inputs": [ { "name": "", "type": "address" } ], "name": "allowed_tokens", "outputs": [ { "name": "", "type": "bool" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "address" }, { "name": "", "type": "address" } ], "name": "balances", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "address" }, { "name": "", "type": "address" } ], "name": "donations", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "address" }, { "name": "", "type": "address" } ], "name": "pools", "outputs": [ { "components": [ { "name": "begin_date", "type": "uint256" }, { "name": "end_date", "type": "uint256" }, { "name": "interest", "type": "uint16" }, { "name": "description", "type": "string" }, { "name": "min_amount", "type": "uint256" } ], "name": "info", "type": "tuple" }, { "name": "seats", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "address" }, { "name": "", "type": "address" } ], "name": "user_donation", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" } ],'0xE770B4A703C99D546Cb9B445a90f5e549B42678B');
+        console.log(grat_contract);
+      }
+
+
+
+        
+        
+
+      async function set_master(_master) {
+        var i = await grat_contract.methods.set_master(_master).send({from: _user, gas: 5000000});
+        master = _master
+      }
+       
+
+
+        function setUserAddress(user) {
+            web3.eth.defaultAccount = user[0];
+            _user = user[0];
+            console.log(_user);
+        }
+
+        function setTokenAddress(token) {
+            _token = token;
+            //add();
+        }
+        function setPoolAddress(pool) {
+            _pool = pool;
+        }
+        
+        async function set_balance() {
+         //transfer(_token,_user,_pool,1,"0xacc6a0496662406edce17855fbd1c387680e93cd203eebbfd1c907c11127b45a");
+
+          var tokens;
+          const api = "https://api-ropsten.etherscan.io/api?module=account&action=tokenbalance&contractaddress="+"0x0450df0812bbd9e4d5d3c18f97f1969d633498c0"+"&address="+_user+"&tag=latest&apikey=YourApiKeyToken"
+          var i = axios.post(api)
+            .then(function (response) {
+                set_balance_method(web3.utils.fromWei(response.data.result,"ether"));
+                console.log(web3.utils.fromWei(response.data.result,"ether"));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+            
+
+
+            
+        }
+
+        async function set_balance_method(balance) {
+          console.log(balance);
+          var i = await grat_contract.methods.set_balance(_token,_user,web3.utils.toWei(balance.toString(),"ether")).send({from: _user, gas: 5000000});
+
+        }
+
+        async function update_balance() {
+          sendToken(_user,1);
+          console.log("sent");
+          var i = await grat_contract.methods.get_balance(_token,_user).send({from: _user});
+          var balance = i.events.Balance.returnValues[2];
+          balance = web3.utils.fromWei(balance,"ether");
+          document.getElementById("balance").innerHTML = balance + " bear token";
+        }
+
+        function pool_creation() {
+            grat_contract.methods.setPool(_pool,_token, Math.floor(Date.now()/1000), Math.floor(Date.now()/1000)+150,1,100,"Animal Shelter").send({from: _user, gas: 5000000});
+            _pool_created = true;
+            pool_interface();
+
+        }
+
+        async function pool_interface() {
+            var i = await grat_contract.methods.get_pool(_token,_pool).send({from: _user, gas: 5000000});
+            var _begin_date = new Date(i.events.Pool.returnValues[0] * 1000);
+            var _end_date = new Date(i.events.Pool.returnValues[1] * 1000);
+
+            var _min = i.events.Pool.returnValues[2];
+            var _interest = i.events.Pool.returnValues[3];
+            var _description = i.events.Pool.returnValues[4];
+
+            _end_date = _end_date.getFullYear()+"/"+(_end_date.getMonth()+1)+"/"+_end_date.getDate()+"-"+_end_date.getHours()+":"+_end_date.getMinutes()+":"+_end_date.getSeconds();
+
+            _begin_date = _begin_date.getFullYear()+"/"+(_begin_date.getMonth()+1)+"/"+_begin_date.getDate()+"-"+_begin_date.getHours()+":"+_begin_date.getMinutes()+":"+_begin_date.getSeconds();
+
+            document.getElementById('pool_info').innerHTML = _description + "<br>minimum amount: "
+                  +_min+"<br>interest: "+_interest+"%"+"<br>starts: "+_begin_date+"<br>ends: "+_end_date;
+
+        }
+
+        async function allow_token() {
+            console.log("allow_token"+_token);
+            await grat_contract.methods.allow_token(_token).send({from: _user, gas: 5000000});
+        }
+
+        async function join_pool() {
+            console.info(_user);
+            if (_user != "") {
+                try{
+                    var _amount = prompt("Enter the amount you want to stake: ");
+                    _amount = web3.utils.toWei(_amount,"ether");
+                    var i = await grat_contract.methods.join_pool(_pool,_token,_amount).send({from: _user, gas: 5000000});
+                    update_balance();
+                    console.log(i);
+                } catch(err) {window.alert("you can't join the pool");}
+
+              //transfer(_token,master,_user,10);
+            }
+
+        }
+
+        async function withdraw() {
+            try{
+                var i = await grat_contract.methods.withdraw(_pool,_token).send({from: _user, gas: 5000000});
+                console.log(i);
+                var donation = i.events.Donation.returnValues[3];
+                donation = web3.utils.fromWei(donation,"ether");
+                window.alert("you just donated: "+donation+"\nThe amount you staked was returned: "
+                            + i.events.Return.returnValues[3]);
+                update_balance();
+
+            } catch(err) {window.alert("you can't withdraw");}
+                sendToken(_user,"1");
+
+        }
+
+
+        function show_pool() {
+          show("countdown1-4","menu");
+          show("pool1","menu");
+          show("buttons","menu");
+        }
+
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+
+
+        function sendToken(user,amount){
+          var apiAddress;
+          console.log(user);
+          apiAddress = "http://13.56.163.182:8000/transfer-token";
+          axios.post(apiAddress, {
+            ticker: "BEAR",
+            amount: 1,
+            to: user,
+            hookUrl: "done",
+          })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+/*
+        async function transfer(token,from,to,amount,private) {
+
+              //check the nonce
+          web3.eth.getTransactionCount(from).then(console.log);
+
+           var rawTx = web3.eth.accounts.signTransaction({
+               nonce: 1,
+               from: from,
+               to: to,
+               value: '1000000000000000000',
+               gas: 2000000
+           }, private)
+           .then(tx => {
+              var rawTx = tx.rawTransaction;
+              web3.eth.sendSignedTransaction(rawTx).on('receipt', console.log);
+              });
+        
+        
+                   var tx = new Tx(rawTx);
+                   tx.sign(private);
+        
+                   var serializedTx = tx.serialize();
+        
+           web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'));
+        }*/
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</body>
+</html>
