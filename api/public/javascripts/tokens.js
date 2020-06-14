@@ -76,10 +76,11 @@ class Tokens {
     }
 
     async approve_owner(spender,amount,ticker) {
+        let token = this.get_token(ticker)[0];
 
         const sgtr = new SignedTransaction();
-        var tx_builder = this.get_token(ticker)[0].contract.methods.approve(spender,amount);
-        await sgtr.transaction(tx_builder,this.get_token(ticker)[0].address);
+        var tx_builder = token.contract.methods.approve(spender,amount);
+        await sgtr.transaction(tx_builder,this.get_token(ticker)[0].address,token.network);
 
 
 

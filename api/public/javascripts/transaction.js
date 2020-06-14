@@ -28,22 +28,22 @@ class SignedTransaction {
     }
 
 
-	async transaction(tx_builder,_to) {
+	async transaction(tx_builder,_to,network) {
         
 
 
             require('dotenv').config();
 
             var privateKey = process.env.REACT_APP_SECRET_INFO;
-            var txCount = await networks.ropsten.eth.getTransactionCount(owner);
+            var txCount = await network.eth.getTransactionCount(owner);
 
 
             var encoded_tx = tx_builder.encodeABI();
 
             var tx = {
                     nonce: txCount,
-                    gas: networks.ropsten.utils.toHex(800000),
-                    gasPrice: networks.ropsten.utils.toHex(price),
+                    gas: network.utils.toHex(800000),
+                    gasPrice: network.utils.toHex(price),
                     data: encoded_tx,
                     from: owner,
                     to: _to
@@ -59,7 +59,7 @@ class SignedTransaction {
             var raw = '0x' + serializedTx.toString('hex');  
 
             
-            var receipt = await networks.ropsten.eth.sendSignedTransaction(raw);
+            var receipt = await network.eth.sendSignedTransaction(raw);
 
         
 
