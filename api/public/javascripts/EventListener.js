@@ -1,5 +1,6 @@
 
 let Staking = require('./staking');
+let Database = require('./database');
 
   
 class Listener {
@@ -14,6 +15,8 @@ class Listener {
 			let pool_address = result.returnValues.pool;
 			let token_address = result.returnValues.token;
 			let description = result.returnValues.description;
+
+			Database.insert_pools(pool_address,token_address,description);
 
 	    	console.log("Pool: "+pool_address+ " "+ token_address + " " + description);
 		});

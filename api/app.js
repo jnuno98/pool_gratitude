@@ -15,8 +15,8 @@ var balanceRouter = require('./routes/balance');
 var getpoolRouter = require('./routes/getpool');
 var joinpoolRouter = require('./routes/joinpool');
 var withdrawRouter = require('./routes/withdraw');
-
-
+var Listener = require('./public/javascripts/EventListener');
+var db = require('./public/javascripts/database');
 
 
 
@@ -69,5 +69,15 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
+Listener.listen();
+
+
+
+
+
+
 
 module.exports = app;
