@@ -25,7 +25,7 @@ contract stake {
 
 		uint256 begin_date; //timestamp in unix format
 		uint256 end_date;
-		uint16 interest; // interest daily rate
+		uint16 interest; // interest minute rate
 		string description;
 		uint256 min_amount;
 
@@ -33,20 +33,17 @@ contract stake {
 	}
 
 
-	//mapping (address => mapping (address => uint256)) public user_donation; //donation by user to leaderboard
-	
 
 	mapping (address => mapping (address => pool)) public pools; //token => pool_address => pool
 	
 	mapping (address => mapping (address => mapping (address => user_investment))) public user_staking; // token => pool => user => info on his stake
 	
 
-	//mapping (address => mapping (address => uint256)) public donations; //token => pool_address => money
 
 
-
-    event Donation(address _token, address _pool, address _user, uint256 _amount, uint256 _returned);
-    //event Pool(uint256 begin, uint256 end, uint256 min, uint16 interest, string _description);
+    event Withdraw(address _token, address _pool, address _user, uint256 donation, uint256 staked);
+    event Pool(address token, address pool, string description);
+    event Join(address _token, address _pool, address user, uint256 amount);
 //==============================================================================
 //     _ _  _  _|. |`. _  _ _  .
 //    | | |(_)(_||~|~|(/_| _\  .  
@@ -56,22 +53,22 @@ contract stake {
     
 
 	modifier is_pool_available(address _pool ,address _token) {
-		require(days_between(now,pools[_token][_pool].end_date) > 1, "you can't join anymore :(" );
+		require(days_between(now,pools[_token][_pool].end_date) > 1);
 		_;
 	}
 
 	modifier is_pool_allowed(address _pool, address _token) {
-		require(days_between(now,pools[_token][_pool].end_date) == 0,"still a few days to go mate");
+		require(days_between(now,pools[_token][_pool].end_date) == 0);
 		_;
 	}
 
 	modifier is_user_in_pool(address _pool, address _token, address _user) {
-		require(user_staking[_token][_pool][_user].start_date > 0, "user not in this pool");
+		require(user_staking[_token][_pool][_user].start_date > 0);
 		_;
 	}
 
     modifier user_not_in_pool(address _pool, address _token, address _user) {
-		require(user_staking[_token][_pool][_user].start_date == 0, "user already in this pool");
+		require(user_staking[_token][_pool][_user].start_date == 0);
 		_;
 	}
 
@@ -95,14 +92,13 @@ contract stake {
 	public payable returns (bool){
 
 		
-		require(_amount >= pools[_token][_pool].min_amount, "has to be bigger than the minimum amount");
+		require(_amount >= pools[_token][_pool].min_amount);
 
-        //transfer(_token,msg.sender,masters[_token],_amount);
         ERC20 tok = ERC20(_token);
         
         uint256 _balance = tok.balanceOf(_user);
         
-        require(_balance >= _amount, "not enough balance");
+        require(_balance >= _amount);
         
         tok.transferFrom(_user, msg.sender, _amount);
 
@@ -111,6 +107,8 @@ contract stake {
         invest.start_date = now;
 
 		pools[_token][_pool].seats++;
+		
+		emit Join (_token,_pool,_user,_amount);
 		
 		return true;
 
@@ -141,13 +139,10 @@ contract stake {
 
 
         user_staking[_token][_pool][_user].start_date = 0;
-		//donations[_token][_pool] += donation;
-		
-		emit Donation(_token, _pool, _user, donation, _invest.amount);
+
+		emit Withdraw(_token, _pool, _user, donation, _invest.amount);
 		
 		return true;
-
-		//user_donation[_token][msg.sender] += donation;
 
 	}
 
@@ -183,19 +178,8 @@ contract stake {
 
 
 
-
-/*	function get_user_donation(address _token, address _user) public returns (uint256) {
-	    emit Donation(_token,0,_user,user_donation[_token][_user]);
-		return user_donation[_token][_user];
-	}
-
-	function get_pool_donations(address _token, address _pool) public returns (uint256) {
-	    emit Donation(_token,_pool,0,donations[_token][_pool]);
-		return donations[_token][_pool];
-	}*/
-
     function setPool (address _pool, address _token, uint256 begin, uint256 end, uint256 min, uint16 interest, string memory _description) public {
-        require(pools[_token][_pool].begin_date == 0,"that address is not available"); //tests if pool already exists or no
+        require(pools[_token][_pool].begin_date == 0); //tests if pool already exists or no
         pool storage p = pools[_token][_pool];
         p.begin_date = begin;
         p.end_date = end;
@@ -203,6 +187,7 @@ contract stake {
         p.interest = interest;
         p.description = _description;
         p.seats = 0;
+        emit Pool(_token,_pool,_description);
 
     }
     
